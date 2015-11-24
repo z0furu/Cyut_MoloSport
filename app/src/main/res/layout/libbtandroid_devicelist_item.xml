@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/libbtandroid_system_ga" >
+
+    <ImageView
+        android:id="@+id/devicelist_item_icon"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16.0dip"
+        android:src="@drawable/libbtandroid_selected" >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/devicelist_item_name"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_marginLeft="16.0dip"
+        android:textColor="#ff000000"
+        android:textSize="@dimen/libbtandroid_text_size_20" />
+</LinearLayout>	

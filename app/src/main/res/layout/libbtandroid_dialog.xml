@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/bluetooth_space"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/libbtandroid_system_wp" >
+
+	<focus.game.libbtandroid.ui.MyViewFlipper
+		android:id="@+id/libbtandroid_view_switcher"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:background="#00000000" >
+
+		<LinearLayout 
+			android:orientation="vertical"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" >
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent"
+				android:background="@drawable/libbtandroid_system_wh" >
+				<TextView 
+					android:gravity="center"
+					android:layout_width="380.0dip" 
+					android:layout_height="wrap_content" 
+					android:textSize="@dimen/libbtandroid_text_size_20" 
+					android:textStyle="bold" 
+					android:textColor="#ff000000" 
+					android:text="@string/libbtandroid_notopen"
+					android:background="@drawable/libbtandroid_system_or" />
+				<TextView 
+					android:gravity="left"
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="8.0dip"
+					android:textSize="@dimen/libbtandroid_text_size_16" 
+					android:textColor="#ff000000" 
+					android:text="@string/libbtandroid_notopen_hint" />
+			</LinearLayout>
+			<LinearLayout
+				android:gravity="center"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content" 
+				android:layout_marginTop="16.0dip">
+
+				<Button
+					android:id="@+id/libbtandroid_btn_open"
+					android:layout_width="200.0dip"
+					android:layout_height="60dip"
+					android:layout_marginRight="5dp"
+					android:background="@drawable/libbtandroid_system_blu"
+					android:text="@string/libbtandroid_open"
+					android:textSize="@dimen/libbtandroid_text_size_20" />
+
+				<!-- <Button
+				    android:id="@+id/libbtandroid_btn_switch_to_usb"
+				    android:layout_width="200.0dip"
+				    android:layout_height="60dip"
+				    android:layout_marginLeft="5dip"
+				    android:background="@drawable/libbtandroid_btn_selector"
+				    android:text="改用USB連接"
+				    android:textSize="@dimen/libbtandroid_text_size_20" />-->
+
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout 
+			android:orientation="vertical"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:background="@drawable/libbtandroid_system_wh" >
+			<TextView 
+				android:gravity="center"
+				android:layout_width="380.0dip" 
+				android:layout_height="wrap_content" 
+				android:textSize="@dimen/libbtandroid_text_size_20" 
+				android:textStyle="bold" 
+				android:textColor="#ff000000" 
+				android:text="@string/libbtandroid_searching"
+				android:background="@drawable/libbtandroid_system_or" />
+			<ProgressBar 
+				style="@style/loading_small"
+				android:layout_gravity="center"
+				android:layout_marginTop="16.0dip" />
+			<TextView 
+				android:gravity="left"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="8.0dip"
+				android:textSize="@dimen/libbtandroid_text_size_16" 
+				android:textColor="#ff000000" 
+				android:text="@string/libbtandroid_searching_hint" />
+
+			<!-- <Button
+			    android:id="@+id/libbtandroid_btn_switch_to_usb_b"
+			    android:layout_width="200.0dip"
+			    android:layout_height="60dip"
+			    android:layout_gravity="center"
+			    android:background="@drawable/libbtandroid_btn_selector"
+			    android:gravity="center"
+			    android:text="改用USB連接"
+			    android:textSize="@dimen/libbtandroid_text_size_20" />-->
+
+		</LinearLayout>
+		<LinearLayout 
+			android:orientation="vertical"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" >
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent"
+				android:background="@drawable/libbtandroid_system_wh" >
+				<TextView 
+					android:gravity="left"
+					android:layout_width="380.0dip" 
+					android:layout_height="wrap_content" 
+					android:textSize="@dimen/libbtandroid_text_size_20" 
+					android:textStyle="bold" 
+					android:textColor="#ff000000" 
+					android:text="@string/libbtandroid_no_device"
+					android:background="@drawable/libbtandroid_system_or" />
+			</LinearLayout>
+			<LinearLayout
+				android:gravity="center"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content" 
+				android:layout_marginTop="16.0dip">
+				<Button
+					android:id="@+id/libbtandroid_btn_search_again" 
+					android:layout_width="200.0dip" 
+					android:layout_height="60dip" 
+					android:layout_marginRight="5dip"	
+					android:textSize="@dimen/libbtandroid_text_size_20"
+					android:text="@string/libbtandroid_search_again" 
+					android:background="@drawable/libbtandroid_system_blu" />
+				<!--  <Button
+					android:id="@+id/libbtandroid_btn_switch_to_usb_c" 
+					android:layout_width="200.0dip" 
+					android:layout_height="60dip" 
+					android:layout_marginLeft="5dip"
+					android:textSize="@dimen/libbtandroid_text_size_20"
+					android:text="改用USB連接" 
+					android:background="@drawable/libbtandroid_btn_selector" />-->
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout 
+			android:orientation="vertical"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:background="@drawable/libbtandroid_system_wh" >
+			<TextView 
+				android:layout_width="380.0dip" 
+				android:layout_height="wrap_content" 
+				android:textSize="@dimen/libbtandroid_text_size_20" 
+				android:textStyle="bold" 
+				android:textColor="#ff000000" 
+				android:text="@string/libbtandroid_select" />
+			<ListView
+				android:id="@+id/libbtandroid_device_list"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16.0dip" />
+			<TextView
+				android:gravity="center"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content" 
+				android:layout_marginTop="16.0dip"
+				android:textSize="@dimen/libbtandroid_text_size_20" 
+				android:textColor="#ff000000" 
+				android:text="@string/libbtandroid_click_select" />
+			<!-- <Button
+					android:id="@+id/libbtandroid_btn_switch_to_usb_d"
+					android:layout_gravity="center"
+					android:layout_width="200.0dip" 
+					android:layout_height="60dip" 
+					android:textSize="@dimen/libbtandroid_text_size_20"
+					android:text="改用USB連接" 
+					android:background="@drawable/libbtandroid_btn_selector" />-->
+		</LinearLayout>
+		<LinearLayout 
+			android:orientation="vertical"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" >
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent"
+				android:background="@drawable/libbtandroid_system_wh" >
+				<TextView 
+					android:gravity="center"
+					android:layout_width="380.0dip" 
+					android:layout_height="wrap_content" 
+					android:textSize="@dimen/libbtandroid_text_size_20" 
+					android:textStyle="bold" 
+					android:textColor="#ff000000" 
+					android:text="@string/libbtandroid_connecting"
+					android:background="@drawable/libbtandroid_system_or" />
+			</LinearLayout>
+		</LinearLayout>
+	</focus.game.libbtandroid.ui.MyViewFlipper>
+</RelativeLayout>

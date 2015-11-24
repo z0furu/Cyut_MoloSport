@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">MoloSport健康計畫</string>
+    <string name="title_activity_login">登入</string>
+    <string name="title_activity_main">MoloSport健康計畫</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_register">註冊</string>
+    <string name="title_activity_personal__data">個人資料</string>
+
+    <string name="menu_item_new">New</string>
+    <string name="menu_item_save">Save</string>
+    <string name="menu_item_delete">Cancel</string>
+    <string name="title_activity_alarm_preferences">設定提醒</string>
+    <string name="title_activity_alarm">提醒</string>
+    <string name="title_activity_personal_info">個人資料設定</string>
+    <string name="title_activity_personal_insert">設定個人減重目標</string>
+
+
+
+    <string name="quila_name">Quila</string>
+    <string name="quila_tagline">I love bones and slippers</string>
+    <string name="quila_name2">Quila!</string>
+    <string name="txtbmi">世界衛生組織建議以身體質量指數（Body Mass Index, BMI）來衡量肥胖程度，
+其計算公式是以體重（公斤）除以身高（公尺）的平方。
+國民健康署建議我國成人BMI應維持在18.5（kg/m2）及24（kg/m2）之間，
+太瘦、過重或太胖皆有礙健康。</string>
+    <string name="txtbmr">基本代謝率是指一個人在靜態的情況下，維持生命所需的最低熱量消耗卡數，主要用於呼吸、心跳、氧氣運送、腺體分泌，腎臟過濾排泄作用，肌肉緊張度，細胞的功能等所需的熱量。簡單來說，若你的基本代謝率是1200卡路里，而你整天都在睡覺，沒有任何其他活動的話，這天便會消耗1200卡路里。
+</string>
+    <string name="title_activity_bike">BIke</string>
+
+    <string name="libbtandroid_notopen">藍牙尚未開啟，無法進行配對&#8230;</string>
+    <string name="libbtandroid_notopen_hint">提示：\n通常在裝置中的【設定】功能中可以找到【藍牙】的選項，將藍牙改為【開啟】就可以順利進行配對&#8230;</string>
+    <string name="libbtandroid_open">開啟藍牙</string>
+    <string name="libbtandroid_searching">與健身車進行配對中&#8230;\n請等候數秒&#8230;</string>
+    <string name="libbtandroid_searching_hint">提示：\n系統搜尋中，若等候過久，請檢查是否與健身車距離過遠，或是健身車未接上電源。</string>
+    <string name="libbtandroid_no_device">周圍無可配對的健身車，請檢查是否與健身車距離過遠，或是健身車未接上電源，確認後按下重新搜尋按鈕，再次搜尋可配對的健身車。</string>
+    <string name="libbtandroid_search_again">重新搜尋</string>
+    <string name="libbtandroid_select">選擇要使用的健身車&#8230;</string>
+    <string name="libbtandroid_click_select">點擊想使用的健身車即可進行配對</string>
+    <string name="libbtandroid_last_use">(上次使用)</string>
+    <string name="libbtandroid_connecting">與健身車連線中&#8230;</string>
+
+</resources>
