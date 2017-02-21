@@ -32,16 +32,15 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile fileTree(include: ['httpclient-4.3.6.jar'], dir: 'libs')
-    compile fileTree(include: ['httpcore-4.3.3.jar'], dir: 'libs')
-    compile fileTree(include: ['httpmime-4.3.6.jar'], dir: 'libs')
-    compile fileTree(include: ['libbtandroid.jar'], dir: 'libs')
+    compile fileTree(dir: 'libs', include: ['httpclient-4.3.6.jar'])
+    compile fileTree(dir: 'libs', include: ['httpcore-4.3.3.jar'])
+    compile fileTree(dir: 'libs', include: ['httpmime-4.3.6.jar'])
+    compile fileTree(dir: 'libs', include: ['libbtandroid.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.0"'
-    compile "com.android.support:design:23.1.0"
+    compile 'com.android.support:design:23.1.0'
     compile 'com.mcxiaoke.volley:library:1.0.18'
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
-    compile 'com.nineoldandroids:library:2.4.+'
     compile 'com.github.PhilJay:MPAndroidChart:v2.1.4'
     compile 'com.orhanobut:logger:1.11'
     compile 'com.github.dmytrodanylyk.android-process-button:library:1.0.4'

@@ -9,15 +9,14 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
@@ -42,7 +41,6 @@ import com.orhanobut.logger.Logger;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -51,6 +49,9 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+/**
+ * 個人資訊畫面
+ */
 public class Personal_data extends AppCompatActivity implements AppBarLayout.OnOffsetChangedListener{
 
     private static final String TAG = Personal_data.class.getSimpleName();
@@ -120,14 +121,16 @@ public class Personal_data extends AppCompatActivity implements AppBarLayout.OnO
                         captureImage();
                     }
                 });
-               /* builder.setNeutralButton("從相簿選擇", new DialogInterface.OnClickListener() {
+               builder.setNeutralButton("從相簿選擇", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        capturePhote();
-
+                        Intent intent = new Intent();
+                        intent.setType("image/*");
+                        intent.setAction(Intent.ACTION_GET_CONTENT);
+                        startActivityForResult(intent, CAMERA_CAPTURE_PHOTE_REQUEST_CODE);
 
                     }
-                });*/
+                });
                 AlertDialog alertDialog = builder.create();
                 alertDialog.show();
             }
@@ -164,7 +167,7 @@ public class Personal_data extends AppCompatActivity implements AppBarLayout.OnO
 
     }
 
-    private void initParallaxValues(){
+    private void initParallaxValues(){          //呼叫動畫函式
         CollapsingToolbarLayout.LayoutParams petDetailsLp =
                 (CollapsingToolbarLayout.LayoutParams) mImageparallax.getLayoutParams();
 
@@ -226,7 +229,7 @@ public class Personal_data extends AppCompatActivity implements AppBarLayout.OnO
         v.startAnimation(alphaAnimation);
     }
 
-    private void Search_Image(final String account){
+    private void Search_Image(final String account){        //搜尋個人大頭照
         String req_string = "req_searchImage";
 
         StringRequest strReq = new StringRequest(Request.Method.POST, Config.Sr_Image, new Response.Listener<String>() {
@@ -258,7 +261,7 @@ public class Personal_data extends AppCompatActivity implements AppBarLayout.OnO
 
         AppController.getmInstance().addToRequestQueue(strReq,req_string);
     }
-    public void displayImg(){
+    public void displayImg(){           //顯示個人圖片
         ImageView imageView = (ImageView)this.findViewById(R.id.viewImage);
         RequestQueue mQueue = Volley.newRequestQueue(getApplicationContext());
 
@@ -266,11 +269,11 @@ public class Personal_data extends AppCompatActivity implements AppBarLayout.OnO
         //http://blog.csdn.net/guolin_blog/article/details/17482165
         ImageLoader.ImageListener listener = ImageLoader.getImageListener(imageView,R.drawable.ic_action_articles, R.drawable.ic_action_articles);
         imageLoader.get(Config.getImage + Image , listener);
-        //指定图片允许的最大宽度和高度
+        //指定圖片允许的最大寬度和高度
         //imageLoader.get("http://developer.android.com/images/home/aw_dac.png",listener, 200, 200);
     }
 
-    private void Search_Personal_Data(final String account){
+    private void Search_Personal_Data(final String account){        //找尋個人資料
 
         String req_string = "req_search_personal_data";
         pDialog.setMessage("載入中");
@@ -351,7 +354,7 @@ public class Personal_data extends AppCompatActivity implements AppBarLayout.OnO
         }
     }
 
-    private boolean isDeviceSupportCamera(){
+    private boolean isDeviceSupportCamera(){        //判斷是否有相機
         if (getApplicationContext().getPackageManager().hasSystemFeature(
                 PackageManager.FEATURE_CAMERA)) {
             return true;
@@ -389,17 +392,17 @@ public class Personal_data extends AppCompatActivity implements AppBarLayout.OnO
 
             } else if (resultCode == RESULT_CANCELED) {
                 Toast.makeText(getApplicationContext(),
-                        "User cancelled image capture", Toast.LENGTH_SHORT)
+                        "取消拍攝", Toast.LENGTH_SHORT)
                         .show();
             } else {
                 Toast.makeText(getApplicationContext(),
-                        "Sorry! Failed to capture image", Toast.LENGTH_SHORT)
+                        "抱歉，不能開啟相機", Toast.LENGTH_SHORT)
                         .show();
             }
         }else if (requestCode ==CAMERA_CAPTURE_PHOTE_REQUEST_CODE){
             if (resultCode == RESULT_OK){
                 Uri uri = data.getData();
-                Log.e("uri",uri.toString());
+                Log.e("uri", uri.toString());
 
                 fileUri = uri;
                 Intent i = new Intent(Personal_data.this, UpImage.class);

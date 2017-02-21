@@ -10,6 +10,10 @@ import com.example.administrator.cyut_molosport.R;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+/**
+ * 個人資訊首頁的動畫
+ */
+
 @SuppressWarnings("unused")
 public class AvatarImageBehavior extends CoordinatorLayout.Behavior<CircleImageView> {
 

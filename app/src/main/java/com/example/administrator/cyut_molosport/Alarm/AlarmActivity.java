@@ -23,6 +23,10 @@ import com.example.administrator.cyut_molosport.R;
 
 import java.util.List;
 
+
+/**
+ * 鬧鐘
+ */
 public class AlarmActivity extends BaseActivity {
 
     ListView mathAlarmListView;

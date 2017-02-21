@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2015/10/14.
+ * 鬧鐘提醒設定的清單
  */
 public class AlarmPreferenceListAdapter  extends BaseAdapter implements Serializable {
 

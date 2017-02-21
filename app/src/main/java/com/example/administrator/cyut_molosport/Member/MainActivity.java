@@ -116,14 +116,14 @@ public class MainActivity extends AppCompatActivity
                     AlertDialog alert = builder.create();
                     alert.show();
                 }else {
-                    Intent intent = new Intent();
-                    intent.setClass(MainActivity.this, Bike.class);
-                    Bundle bundle = new Bundle();
-                    bundle.putInt("Todaykcal",Todaykcal);
-                    bundle.putInt("TotalKcal",TotalKcal);
-                    intent.putExtras(bundle);
-                    startActivity(intent);
-                    finish();
+//                    Intent intent = new Intent();
+//                    intent.setClass(MainActivity.this, Bike.class);
+//                    Bundle bundle = new Bundle();
+//                    bundle.putInt("Todaykcal",Todaykcal);
+//                    bundle.putInt("TotalKcal",TotalKcal);
+//                    intent.putExtras(bundle);
+//                    startActivity(intent);
+//                    finish();
                 }
 
             }

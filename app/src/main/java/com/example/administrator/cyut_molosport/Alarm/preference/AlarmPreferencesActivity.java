@@ -9,9 +9,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Vibrator;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.HapticFeedbackConstants;
 import android.view.Menu;
@@ -32,6 +29,9 @@ import com.example.administrator.cyut_molosport.R;
 
 import java.util.Calendar;
 
+/**
+ * 鬧鐘偏好設定的畫面
+ */
 public class AlarmPreferencesActivity extends BaseActivity {
 
     private Alarm alarm;

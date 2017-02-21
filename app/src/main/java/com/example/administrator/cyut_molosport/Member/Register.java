@@ -29,6 +29,9 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 註冊畫面
+ */
 public class Register extends AppCompatActivity {
 
     private static final String TAG = Register.class.getSimpleName();
@@ -106,7 +109,7 @@ public class Register extends AppCompatActivity {
                     } else {
                         sex = "男";
                     }
-                    registerUser(account, password, username, age, height, weight, sex);
+                    registerUser(account, password, username, age, height, weight, sex);        //上傳個人資訊
                 }
             }
         });

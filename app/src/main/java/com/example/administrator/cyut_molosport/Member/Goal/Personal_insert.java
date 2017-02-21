@@ -35,6 +35,9 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 新增個人減重目標
+ */
 public class Personal_insert extends AppCompatActivity {
 
     private static final String TAG = Personal_insert.class.getSimpleName();
@@ -232,9 +235,9 @@ public class Personal_insert extends AppCompatActivity {
                 Logger.d(String.valueOf(GoalDate));
                 TotalKcal = GoalDate*BMR;
                 if (success == 1 ){
-                    Update_Goal(account);
+                    Update_Goal(account);       //如果資料庫有資料，就會更新
                 }else {
-                    Insert_Goal(account);
+                    Insert_Goal(account);       //如果資料庫沒有資料，就會執行新增的動作
                 }
             }
         });

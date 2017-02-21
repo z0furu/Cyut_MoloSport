@@ -22,6 +22,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ *上傳圖片的function
+ */
 
 public class MultipartRequest  extends Request<String> {
 
@@ -32,15 +35,7 @@ public class MultipartRequest  extends Request<String> {
     private List<File> mFileParts;
     private String mFilePartName;
     private Map<String, String> mParams;
-    /**
-     * 单个文件
-     * @param url
-     * @param errorListener
-     * @param listener
-     * @param filePartName
-     * @param file
-     * @param params
-     */
+
     public MultipartRequest(String url, Response.ErrorListener errorListener,
                             Response.Listener<String> listener, String filePartName, File file,
                             Map<String, String> params) {

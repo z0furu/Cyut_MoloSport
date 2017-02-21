@@ -13,6 +13,9 @@ import com.example.administrator.cyut_molosport.Alarm.service.AlarmServiceBroadc
 import com.example.administrator.cyut_molosport.Member.MainActivity;
 import com.example.administrator.cyut_molosport.R;
 
+/**
+ * 當時間到的時候，跳出提醒
+ */
 public class AlarmReceiver extends BroadcastReceiver {
 
 

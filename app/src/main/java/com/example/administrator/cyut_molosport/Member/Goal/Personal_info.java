@@ -33,6 +33,10 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+
+/**
+ * 修改個人資訊
+ */
 public class Personal_info extends AppCompatActivity {
 
     private static final String TAG = Personal_info.class.getSimpleName();
@@ -82,7 +86,7 @@ public class Personal_info extends AppCompatActivity {
 
         Search(account);
 
-        confirm.setOnClickListener(new View.OnClickListener() {
+        confirm.setOnClickListener(new View.OnClickListener() {         //確認更新
             @Override
             public void onClick(View v) {
                 if ("".equals(mage.getText().toString().trim()) || "".equals(mheight.getText().toString()) || "".equals(mweight.getText().toString().trim())) {
@@ -104,13 +108,13 @@ public class Personal_info extends AppCompatActivity {
                         sex = "女";
                     }
                     setGoal = false;
-                    UpdatePersonalInfo(account, Age, Height, Weight, sex);
+                    UpdatePersonalInfo(account, Age, Height, Weight, sex);  //更新個人資訊
 
                 }
             }
         });
 
-        btnsetgoal.setOnClickListener(new View.OnClickListener() {
+        btnsetgoal.setOnClickListener(new View.OnClickListener() {      //跳到設定個人目標減重
             @Override
             public void onClick(View v) {
                 if ("".equals(mage.getText().toString().trim()) || "".equals(mheight.getText().toString()) || "".equals(mweight.getText().toString().trim())) {
@@ -270,13 +274,13 @@ public class Personal_info extends AppCompatActivity {
         AppController.getmInstance().addToRequestQueue(strReq,req_string);
     }
 
-    private void showDialog(){
+    private void showDialog(){      //開啟提醒
         if (!pDialog.isShowing()){
             pDialog.show();
         }
     }
 
-    private void hideDialog(){
+    private void hideDialog(){  //關閉提醒
         if (pDialog.isShowing()){
             pDialog.dismiss();
         }

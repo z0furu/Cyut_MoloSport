@@ -1,7 +1,7 @@
 package com.example.administrator.cyut_molosport.Alarm.preference;
 
 /**
- * Created by Administrator on 2015/10/14.
+ * 鬧鐘的偏好設定
  */
 public class AlarmPreference  {
     public enum Key{

@@ -33,6 +33,10 @@ import java.beans.PropertyChangeListener;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ *登入畫面
+ **/
+
 public class Login extends AppCompatActivity implements ProgressGenerator.OnCompleteListener{
 
     private static final String TAG = Login.class.getSimpleName();
@@ -67,14 +71,14 @@ public class Login extends AppCompatActivity implements ProgressGenerator.OnComp
 
                 String account = edtAccount.getText().toString();
                 String password = edtPassword.getText().toString();
-                MemberLogin(account, password);
+                MemberLogin(account, password);         //開始登入
             }
         });
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Login.this, Register.class));
+                startActivity(new Intent(Login.this, Register.class));  //註冊畫面
 
             }
         });
@@ -96,7 +100,7 @@ public class Login extends AppCompatActivity implements ProgressGenerator.OnComp
                         SharedPreferences setting = getSharedPreferences("Preference", 0);
                         setting.edit().putString("account", account).commit();
 
-                        progressGenerator.start(BtnSignIn);
+                        progressGenerator.start(BtnSignIn);     //登入成功後開始執行按鈕動畫
                         //Toast.makeText(Login.this, "登入成功", Toast.LENGTH_SHORT).show();
 
                     } else {
@@ -129,7 +133,7 @@ public class Login extends AppCompatActivity implements ProgressGenerator.OnComp
     }
 
     @Override
-    public void onComplete() {
+    public void onComplete() {        //執行完登入按鈕動畫後，會跳到主畫面
         startActivity(new Intent(Login.this, MainActivity.class));
         finish();
     }

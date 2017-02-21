@@ -9,6 +9,9 @@ import com.example.administrator.cyut_molosport.Member.Login;
 import com.example.administrator.cyut_molosport.Member.MainActivity;
 import com.orhanobut.logger.Logger;
 
+/**
+ *判斷是否有登入過
+ */
 public class Welcome extends AppCompatActivity {
 
     private SharedPreferences setting;

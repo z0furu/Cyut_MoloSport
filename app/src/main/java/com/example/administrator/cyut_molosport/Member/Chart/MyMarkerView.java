@@ -14,7 +14,7 @@ import com.orhanobut.logger.Logger;
 import org.w3c.dom.Text;
 
 /**
- * Created by Administrator on 2015/10/27.
+ * 點選圖表時會顯示該圖表上面的值
  */
 public class MyMarkerView extends MarkerView {
 

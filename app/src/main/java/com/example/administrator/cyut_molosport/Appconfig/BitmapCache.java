@@ -6,7 +6,7 @@ import android.util.LruCache;
 import com.android.volley.toolbox.ImageLoader;
 
 /**
- * Created by Lu on 2015/8/11.
+ * 儲存相片的快取
  */
 public class BitmapCache implements ImageLoader.ImageCache {
 

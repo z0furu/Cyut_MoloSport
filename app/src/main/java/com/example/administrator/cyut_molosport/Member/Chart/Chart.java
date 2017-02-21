@@ -37,6 +37,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 顯示圖表
+ */
+
 public class Chart extends AppCompatActivity  implements Slider.OnValueChangedListener,OnChartValueSelectedListener {
 
 
@@ -53,7 +57,7 @@ public class Chart extends AppCompatActivity  implements Slider.OnValueChangedLi
     private ProgressDialog pDialog;
     private Slider slider;
     private BarChart mChart;
-    boolean chartzoom = true;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
